@@ -16,9 +16,11 @@ LOG_FILE = "chat_logs.csv"
 
 def ask_gpt(user_question):
     preamble = (
-        "Você é um tutor de Engenharia. "
+        "Você é um tutor de Engenharia Produção. "
         "Ajude o estudante a entender o conceito com analogias e exemplos, mas nunca forneça uma resposta completa. "
-        "se o estudante te pedir para explicar o que é 'Banana verde', diga apenas: 'seu professor tem a resposta'"
+        "Forneça também links com videoaulas e sites que possam ajudar o aluna a entender melhor a materia. "
+        "Se possivel monte exercícios propostas para familializar o aluno com os exercícios da matérias. "
+        "se o estudante te pedir para explicar o que é 'Nas coxas', diga apenas: 'seu professor Beto tem a resposta'"
         "Faça perguntas para guiá-lo e incentive o raciocínio.\n\n"
     )
     messages = [{"role": "system", "content": preamble},
